@@ -1,0 +1,72 @@
+.carousel .item {
+  height: 500px;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  left: 0px;
+}
+.judulbanner {
+  position: absolute;
+  left: 456px;
+  top: 124px;
+}
+.subtitle1 {
+  font-family: cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 96px;
+
+  color: #09168a;
+}
+.subtitle2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: #a1d0e6;
+}
+.bgnav {
+  background: #fcc2a2 !important;
+}
+.kategori-title {
+  position: relative;
+  background: #ffc5a4;
+
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: bold;
+}
+.subkategori {
+  background: #fdeadf;
+  color: #cf5612;
+  font-size: 18px;
+  font-family: cursive;
+  line-height: 10pt;
+  padding: 0;
+}
+.bgcardbody {
+  background: #ffc5a4 !important;
+  padding: 1px !important;
+}
+.harga {
+  color: #aa4208;
+}
+.btndetail {
+  background: #ff8743;
+  border: 3px solid #ff8743;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+.fontheader{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  font-style: oblique;
+}
