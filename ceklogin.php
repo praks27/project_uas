@@ -11,7 +11,8 @@ if(isset($_POST['btnlogin'])){
 		$data = mysqli_fetch_array($result);
 		session_start();
 		$_SESSION['userlogin'] = $txt_user;
-		$_SESSION['namauser'] = $data['nama_user'];
+		$_SESSION['namauser'] = $data['nama_lengkap'];
+		$_SESSION['iduser'] = $data['id_user'];
 		header("Location: ".MAIN_URL."/admin/home.php");	
 	}else{
 		header("Location: ".MAIN_URL."");

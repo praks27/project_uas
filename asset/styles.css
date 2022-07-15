@@ -35,7 +35,7 @@
 }
 .kategori-title {
   position: relative;
-  background: #ffc5a4;
+  background: #010324;
 
   color: white;
   text-align: center;
@@ -44,29 +44,51 @@
   font-weight: bold;
 }
 .subkategori {
-  background: #fdeadf;
-  color: #cf5612;
+  background: #a1d0e6;
+  color: #010324;
   font-size: 18px;
   font-family: cursive;
   line-height: 10pt;
   padding: 0;
 }
 .bgcardbody {
-  background: #ffc5a4 !important;
+  background: #010324 !important;
   padding: 1px !important;
 }
 .harga {
-  color: #aa4208;
+  color: #fff;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
 }
 .btndetail {
-  background: #ff8743;
-  border: 3px solid #ff8743;
+  background: #a1d0e6;
+  border: 3px solid #010324;
   box-sizing: border-box;
-  color: white;
+  color: black;
   text-align: center;
+}
+.btndetail:hover{
+  background-color: #000000;
+  color: white;
 }
 .fontheader{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 800;
   font-style: oblique;
+}
+.card-title{
+  color: rgb(147, 211, 253);
+  font-family: cursive;
+}
+.text{
+  color:#010324;
+}
+.text:hover{
+  color: white;
 }

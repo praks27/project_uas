@@ -42,7 +42,7 @@ security_login();
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-light bg-primary">
+	<nav class="navbar fixed-top navbar-light bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand text-white">Welcome,<?= $_SESSION['namauser']; ?> </a>
 			<form class="d-flex">
@@ -87,6 +87,10 @@ security_login();
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../asset/userlogin.js"></script>
     <script src="../asset/alat.js"></script>
+    <script src="../asset/studio.js"></script>
+    <script src="../asset/katalat.js"></script>
+    <script src="../asset/katstudio.js"></script>
+    <script src="../asset/hakakses.js"></script>
 </body>
 
 </html>

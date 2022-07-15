@@ -16,8 +16,6 @@ $("#btndaftar").click(function () {
         alert("password wajib diisi!");
       }else if(passwordkonfirm==""||passwordkonfirm==null){
         alert("silahkan konfirasi password anda!");
-      }else if(password!=passwordkonfirm){
-        alert("password yang anda masukkan tidak sama");
       }else if (tgllhr==""||tgllhr==null){
         alert("silahkan masukkan tanggal lahir anda !!");
       }else if(notelp==""||notelp==null){
@@ -32,6 +30,18 @@ $("#btndaftar").click(function () {
         $("#konfirmasi").modal("show");
       }
   });
+  $("#passkonfirm").on("keyup",function (){
+    let pass = $("#pass").val();
+    let passkonfirm = $("#passkonfirm").val();
+    
+     if(pass != passkonfirm){
+        // $("#btnsubmit").prop('disabled', true);
+        $("#alertpass").html("password tidak sama !!").show("#alertpass");
+    }else{
+        // $("#btnsubmit").prop('disabled', false);
+        $("#alertpass").html("oke password sama").hide("#alertpass");
+    }
+});
   $("#btnyes").click(function () {
     $("#formdaft").attr("action", "memberctrl.php");
     $("#formdaft").submit();

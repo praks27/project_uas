@@ -3,7 +3,7 @@ include_once("alatctrl.php");
 if (!isset($_GET['action'])) {
 ?>
     <h3 class="fontheader">DATA ALAT MUSIC</h3>
-	<a href="?modul=mod_alat&action=add" class="btn btn-primary btn-xs mb-1">Tambah Data</a>
+	<a href="?modul=mod_alat&action=add" class="btn btn-success btn-xs mb-1">Tambah Data</a>
 	<table class="table table-bordered">
 		<tr>
 			<th>foto</th>
@@ -26,10 +26,10 @@ if (!isset($_GET['action'])) {
             <td><?=$list['stock']; ?></td>
             <td><?=$list['hrg_alat']; ?></td>
             <td> 
-                <a href="?modul=mod_alat&action=edit&id=<?=$list['id_alat']; ?>" class="btn btn-primary">
-                        <i class="bi bi-pencil-square"></i>edit</a>
+                <a href="?modul=mod_alat&action=edit&id=<?=$list['id_alat']; ?>" class="btn btn-success mb-1">
+                        <i class="bi bi-pencil-square"></i> edit</a>
                 <a href="?modul=mod_alat&action=delete&id=<?=$list['id_alat']; ?>" class="btn btn-danger">
-                        <i class="bi bi-trash"></i>delete</a>
+                        <i class="bi bi-trash"></i> delete</a>
             </td>
         </tr>
         <?php } ?>
@@ -67,7 +67,7 @@ if (!isset($_GET['action'])) {
     ?>
 	<form action="?modul=mod_alat&action=save" id="formalat" method="POST" enctype="multipart/form-data">
         <div class="row mb-1">
-			<label class="col-md-3">NIM</label>
+			<label class="col-md-3">Kode Alat</label>
 				<div class="col-md-5">
                     <input type="hidden" name="proses" value="<?= $proses; ?>">
                     <input type="hidden" name="idalat" value="<?= $upidalat; ?>">
@@ -116,7 +116,7 @@ if (!isset($_GET['action'])) {
         <div class="row pt-3">
                 <label class="col-md-3"></label>
                 <div class="col-md-5">
-                    <button type="button" id="btnsubmit" class="btn btn-primary" data-bs-toggle="modal">Simpan</button>
+                    <button type="button" id="btnsubmit" class="btn btn-success" data-bs-toggle="modal">Simpan</button>
                     <a href="home.php?modul=mod_alat"><button type="button" class="btn btn-warning">Kembali</button></a>
                 </div>
             </div>
@@ -125,7 +125,7 @@ if (!isset($_GET['action'])) {
     <form action="?modul=mod_alat&action=save" id="formalat" method="POST" enctype="multipart/form-data">
         <?php if($proses=="update"){ ?>
         <div class="row mb-1">
-			<label class="col-md-3">kode alat</label>
+			<label class="col-md-3">Kode Alat</label>
 			<div class="col-md-5">
             <input type="hidden" name="proses" value="<?= $proses; ?>">
             <input type="hidden" name="idalat" value="<?= $upidalat; ?>">
@@ -134,19 +134,19 @@ if (!isset($_GET['action'])) {
 		</div>
         <?php } ?>
 		<div class="row mb-1">
-			<label class="col-md-3">nama  alat</label>
+			<label class="col-md-3">Nama  Alat</label>
 			<div class="col-md-5">
 				<input type="text" name="nmalat" id="nmalat" class="form-control" value="<?= $upnmalat;?>">
 			</div>
 		</div>
 		<div class="row mb-1">
-			<label class="col-md-3">stock</label>
+			<label class="col-md-3">Stock</label>
 			<div class="col-md-5">
 				<input type="number" name="stock" id="stock" class="form-control" value="<?= $upstock;?>">
 			</div>
 		</div>
 		<div class="row mb-1">
-			<label class="col-md-3">harga</label>
+			<label class="col-md-3">Harga</label>
 			<div class="col-md-5">
 				<input type="text" name="hargasewa" id="hargasewa" class="form-control" value="<?= $upharga;?>">
 			</div>
@@ -192,7 +192,7 @@ if (!isset($_GET['action'])) {
         <div class="row pt-3">
                 <label class="col-md-3"></label>
                 <div class="col-md-5">
-                    <button type="button" name="btnsubmit" id="btnsubmit" class="btn btn-primary">Simpan</button>
+                    <button type="button" name="btnsubmit" id="btnsubmit" class="btn btn-success">Simpan</button>
                     <a href="home.php?modul=mod_alat"><button type="button" class="btn btn-warning">Kembali</button></a>
                 </div>
             </div>
