@@ -31,6 +31,7 @@ if($proses=="insert"){
 	$katalat = $_POST['katalat'];
 	$stock = $_POST['stock'];
 	$hrgsewa = $_POST['hargasewa'];
+	$desk = $_POST['deskripsi'];
     $file = $_FILES['img'];
 		$target_dir = "../asset/img/";
 		$target_file =  $target_dir.basename($file['name']);
@@ -52,7 +53,7 @@ if($proses=="insert"){
 		if($is_upload == 1){
 			if(move_uploaded_file($file['tmp_name'], $target_file)){
 				$namafile = $file['name'];
-                mysqli_query($koneksidb,"INSERT INTO mst_alatsewa (kode_alat,nm_alat,id_katalat,stock,hrg_alat,gambar) values ('$kda','$nmalat','$katalat','$stock','$hrgsewa','$namafile')")or die(mysqli_error($koneksidb));
+                mysqli_query($koneksidb,"INSERT INTO mst_alatsewa (kode_alat,nm_alat,id_katalat,stock,hrg_alat,deskripsi,gambar) values ('$kda','$nmalat','$katalat','$stock','$hrgsewa','$desk','$namafile')")or die(mysqli_error($koneksidb));
 	            echo '<meta http-equiv="refresh" content="0; url='.ADMIN_URL.'?modul=mod_alat">';
              
             }
@@ -69,7 +70,8 @@ if($proses=="insert"){
             $hargasewa = $_POST['hargasewa'];
             $katalat = $_POST['katalat'];
             $namafile = $_POST['gambarlama'];
-            mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
+            $desk = $_POST['deskripsi'];
+            mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',deskripsi='$desk',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
             echo '<meta http-equiv="refresh" content="0; url=' . ADMIN_URL . '?modul=mod_alat">';
         } else {
             $file = $_FILES['img'];
@@ -98,11 +100,12 @@ if($proses=="insert"){
                     $stock = $_POST['stock'];
                     $hargasewa = $_POST['hargasewa'];
                     $katalat = $_POST['katalat'];
+                    $desk = $_POST['deskripsi'];
                     if ($namafile == $_POST['gambarlama']) {
-                        $edit = mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
+                        $edit = mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',deskripsi='$desk',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
                     } else {
                         $old = $_POST['gambarlama'];
-                        $edit = mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
+                        $edit = mysqli_query($koneksidb, "UPDATE mst_alatsewa SET nm_alat='$nmalat',stock='$stock',hrg_alat='$hargasewa',id_katalat='$katalat',deskripsi='$desk',gambar='$namafile' WHERE id_alat = '$id' ") or die(mysqli_error($koneksidb));
                         unlink("../asset/img/$old");
                     }
                     echo '<meta http-equiv="refresh" content="0; url=' . ADMIN_URL . '?modul=mod_alat">';

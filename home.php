@@ -57,7 +57,7 @@ function fnumber($fharga){
 						</div>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item btndetail">
-								<a href="?page=detailproduk&idalat=<?= $lp['id_alat'];?>" target="_blank" class="text-white">Detail</a>
+								<a href="?page=detailproduk&idalat=<?= $la['id_alat'];?>" class="text-white">Detail</a>
 							</li>
 						</ul>
 					</div>
@@ -79,7 +79,7 @@ function fnumber($fharga){
 						</div>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item btndetail">
-								<a href="?page=detailproduk&idstudio=<?= $lp['id_studio'];?>" target="_blank" class="text-white">Detail</a>
+								<a href="?page=detailproduk&idstudio=<?= $ls['id_studio'];?>" class="text-white">Detail</a>
 							</li>
 						</ul>
 					</div>
@@ -89,3 +89,5 @@ function fnumber($fharga){
 		</div>
 	</div>
 </div>
+<script src="asset/daftar.js"></script>
+<script src="asset/proses.js"></script>

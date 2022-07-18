@@ -30,6 +30,7 @@ if($proses=="insert"){
 	$katstudio = $_POST['katstudio'];
 	$jmlstudio = $_POST['jmlstudio'];
 	$hrgsewa = $_POST['hargasewa'];
+	$desk = $_POST['deskripsi'];
     $file = $_FILES['img'];
 		$target_dir = "../asset/img/";
 		$target_file =  $target_dir.basename($file['name']);
@@ -51,7 +52,7 @@ if($proses=="insert"){
 		if($is_upload == 1){
 			if(move_uploaded_file($file['tmp_name'], $target_file)){
 				$namafile = $file['name'];
-                mysqli_query($koneksidb,"INSERT INTO mst_studio (kode_studio,nm_studio,id_katstudio,jml_studio,hrg_sewastudio,gambar) values ('$kds','$nmstudio','$katstudio','$jmlstudio','$hrgsewa','$namafile')")or die(mysqli_error($koneksidb));
+                mysqli_query($koneksidb,"INSERT INTO mst_studio (kode_studio,nm_studio,id_katstudio,jml_studio,hrg_sewastudio,deskripsi,gambar) values ('$kds','$nmstudio','$katstudio','$jmlstudio','$hrgsewa','$desk','$namafile')")or die(mysqli_error($koneksidb));
 	            echo '<meta http-equiv="refresh" content="0; url='.ADMIN_URL.'?modul=mod_studio">';
              
             }
@@ -69,7 +70,8 @@ if($proses=="insert"){
             $hargasewa = $_POST['hargasewa'];
             $katstudio = $_POST['katstudio'];
             $namafile = $_POST['gambarlama'];
-            mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
+            $desk = $_POST['deskripsi'];
+            mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',deskripsi='$desk',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
             echo '<meta http-equiv="refresh" content="0; url=' . ADMIN_URL . '?modul=mod_studio">';
         } else {
             $file = $_FILES['img'];
@@ -98,11 +100,12 @@ if($proses=="insert"){
                     $jmlstudio = $_POST['jmlstudio'];
                     $hargasewa = $_POST['hargasewa'];
                     $katstudio = $_POST['katstudio'];
+                    $desk = $_POST['deskripsi'];
                     if ($namafile == $_POST['gambarlama']) {
-                        $edit = mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
+                        $edit = mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',deskripsi='$desk',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
                     } else {
                         $old = $_POST['gambarlama'];
-                        $edit = mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
+                        $edit = mysqli_query($koneksidb, "UPDATE mst_studio SET nm_studio='$nmstudio',jml_studio='$jmlstudio',hrg_sewastudio='$hargasewa',id_katstudio='$katstudio',deskripsi='$desk',gambar='$namafile' WHERE id_studio = '$id' ") or die(mysqli_error($koneksidb));
                         unlink("../asset/img/$old");
                     }
                     echo '<meta http-equiv="refresh" content="0; url=' . ADMIN_URL . '?modul=mod_studio">';

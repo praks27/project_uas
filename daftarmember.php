@@ -76,6 +76,7 @@
 									<label for="txtemail" class="col-md-3">Confirm Password</label>
 									<div class="col-md-6">
 										<input type="Password" name="txtpasscon" id="txtpasscon" class="form-control" />
+										<p class="alertpass" id="alertpass"></p>
 									</div>
 								</div>
 								<div class="row pb-1">

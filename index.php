@@ -14,6 +14,11 @@
 	<script src="asset/boostrap/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="asset/styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>
+        p{
+            line-height: 1.2;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,6 +38,9 @@
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fontnav">
 					<li class="nav-item">
 						<a class="nav-link" href="?page=daftarmember">Daftar Member</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="?page=order">Sewa</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
@@ -123,6 +131,7 @@
 	<!-- js -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="asset/daftar.js"></script>
+	<script src="asset/proses.js"></script>
     
 </body>
 

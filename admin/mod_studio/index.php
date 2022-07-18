@@ -12,6 +12,7 @@ if (!isset($_GET['action'])) {
 			<th>Kategori Studio</th>
 			<th>Jumlah Studio</th>
 			<th>Harga Sewa</th>
+			<th>Deskripsi</th>
 			<th>Action</th>
 		</tr>
 		<?php
@@ -25,6 +26,7 @@ if (!isset($_GET['action'])) {
             <td><?=$list['jenis_studio']; ?></td>
             <td><?=$list['jml_studio']; ?></td>
             <td><?=$list['hrg_sewastudio']; ?></td>
+            <td><?=$list['deskripsi']; ?></td>
             <td> 
                 <a href="?modul=mod_studio&action=edit&id=<?=$list['id_studio']; ?>" class="btn btn-primary">
                         <i class="bi bi-pencil-square"></i>edit</a>
@@ -108,6 +110,12 @@ if (!isset($_GET['action'])) {
 			</div>
 		</div>
         <div class="row mb-1">
+			<label class="col-md-3">Deskripsi</label>
+			<div class="col-md-5">
+				<textarea type="text" name="deskripsi" id="deskripsi" class="form-control"></textarea>
+			</div>
+		</div>
+        <div class="row mb-1">
 			<label class="col-md-3">Foto</label>
 			<div class="col-md-5">
 				<input type="file" name="img" id="img" class="form-control" >
@@ -171,6 +179,12 @@ if (!isset($_GET['action'])) {
                     </select>
                 </div>
             </div>
+        <div class="row mb-1">
+			<label class="col-md-3">Deskripsi</label>
+			<div class="col-md-5">
+				<textarea type="text" name="deskripsi" id="deskripsi" class="form-control"><?=$dt['deskripsi']; ?></textarea>
+			</div>
+		</div>
         <div class="row mb-1">
 			<label class="col-md-3">Foto</label>
 			<div class="col-md-5">

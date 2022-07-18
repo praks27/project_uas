@@ -1,3 +1,4 @@
+if(document.getElementById("formdaft")){
 $("#btndaftar").click(function () {
     let nama = $("#txtnama").val();
     let email = $("#txtemail").val();
@@ -30,15 +31,14 @@ $("#btndaftar").click(function () {
         $("#konfirmasi").modal("show");
       }
   });
-  $("#passkonfirm").on("keyup",function (){
-    let pass = $("#pass").val();
-    let passkonfirm = $("#passkonfirm").val();
-    
+  $("#txtpasscon").on("keyup",function (){
+    let pass = $("#txtpass").val();
+    let passkonfirm = $("#txtpasscon").val();
      if(pass != passkonfirm){
-        // $("#btnsubmit").prop('disabled', true);
+        $("#btndaftar").prop('disabled', true);
         $("#alertpass").html("password tidak sama !!").show("#alertpass");
     }else{
-        // $("#btnsubmit").prop('disabled', false);
+        $("#btndaftar").prop('disabled', false);
         $("#alertpass").html("oke password sama").hide("#alertpass");
     }
 });
@@ -47,4 +47,5 @@ $("#btndaftar").click(function () {
     $("#formdaft").submit();
     $(location).attr("href","?page=daftarmember");
   });
+}
   

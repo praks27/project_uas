@@ -4,7 +4,7 @@ if (!isset($_GET['action'])) {
 ?>
     <h3 class="fontheader">DATA ALAT MUSIC</h3>
 	<a href="?modul=mod_alat&action=add" class="btn btn-success btn-xs mb-1">Tambah Data</a>
-	<table class="table table-bordered">
+	<table class="table table-striped">
 		<tr>
 			<th>foto</th>
 			<th>kode alat</th>
@@ -12,6 +12,7 @@ if (!isset($_GET['action'])) {
 			<th>kategori alat</th>
 			<th>stock</th>
 			<th>harga alat</th>
+			<th>deskripsi</th>
 			<th>Action</th>
 		</tr>
 		<?php
@@ -25,6 +26,7 @@ if (!isset($_GET['action'])) {
             <td><?=$list['nm_katalat']; ?></td>
             <td><?=$list['stock']; ?></td>
             <td><?=$list['hrg_alat']; ?></td>
+            <td><?= substr($list['deskripsi'], 0, 200)?></td>
             <td> 
                 <a href="?modul=mod_alat&action=edit&id=<?=$list['id_alat']; ?>" class="btn btn-success mb-1">
                         <i class="bi bi-pencil-square"></i> edit</a>
@@ -108,6 +110,12 @@ if (!isset($_GET['action'])) {
 			</div>
 		</div>
         <div class="row mb-1">
+			<label class="col-md-3">Deskripsi</label>
+			<div class="col-md-5">
+				<textarea type="text" name="deskripsi" id="deskripsi" class="form-control"></textarea>
+			</div>
+		</div>
+        <div class="row mb-1">
 			<label class="col-md-3">Foto</label>
 			<div class="col-md-5">
 				<input type="file" name="img" id="img" class="form-control" >
@@ -171,6 +179,12 @@ if (!isset($_GET['action'])) {
                     </select>
                 </div>
             </div>
+        <div class="row mb-1">
+			<label class="col-md-3">Deskripsi</label>
+			<div class="col-md-5">
+				<textarea type="text" name="deskripsi" id="deskripsi" class="form-control"><?=$dt['deskripsi']; ?></textarea>
+			</div>
+		</div>
         <div class="row mb-1">
 			<label class="col-md-3">Foto</label>
 			<div class="col-md-5">

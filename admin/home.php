@@ -17,7 +17,7 @@ security_login();
 	<link href="../asset/styles.css" rel="stylesheet">
 	<!-- link icon bootstrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-	<script src="https://cdn.tiny.cloud/1/ctai2l7ettpdz3uyphr0lz4x23v2z3otpascq7sk3miw64e3/tinymce/6/tinymce.min.js"
+	<script src="https://cdn.tiny.cloud/1/jwgliusjyhiqgbsrcceq6vc5dkmxddnw9j5mh1ry1qqv897t/tinymce/6/tinymce.min.js"
 		referrerpolicy="origin"></script>
 	<script>
 	tinymce.init({
@@ -66,7 +66,7 @@ security_login();
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-9">
 				<div class="container">
 					<br>
 					<?php
