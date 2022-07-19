@@ -4,6 +4,11 @@ session_destroy();
 function fnumber($fharga){
     $harga = number_format($fharga,0,',','.');
     return $harga;
+
+	// if (isset($_POST['search'])) {
+	// 	$search = $_POST['search'];
+	// 	$hasil = mysqli_query($koneksidb, "SELECT a.*,b.nm_kategori FROM mst_komik a INNER JOIN mst_kategori b ON a.id_kategori = b.id_kategori WHERE a.judul LIKE '%$search%'");
+	// }
 }
 ?>
 <div class="container pb-5">
@@ -32,7 +37,7 @@ function fnumber($fharga){
             <div class="subkategori" id="">
             	<ul>
                 	<li> 
-                		<a href="?page=&id=<?php echo $row['id_katstudio'];?>" class="text"><?php echo $row['jenis_studio'];?></a>
+                		<a href="?page=&idstudio=<?php echo $row['id_katstudio'];?>" class="text"><?php echo $row['jenis_studio'];?></a>
                 		</li>
             		</ul>
 				</div>
@@ -90,4 +95,5 @@ function fnumber($fharga){
 	</div>
 </div>
 <script src="asset/daftar.js"></script>
+<script src="asset/proses.js"></script>
 <script src="asset/proses.js"></script>

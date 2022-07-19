@@ -4,8 +4,8 @@ if (!isset($_GET['action'])) {
 ?>
     <h3 class="fontheader">DATA ALAT MUSIC</h3>
 	<a href="?modul=mod_alat&action=add" class="btn btn-success btn-xs mb-1">Tambah Data</a>
-	<table class="table table-striped">
-		<tr>
+	<table class="table table-bordered">
+		<tr class="table-dark">
 			<th>foto</th>
 			<th>kode alat</th>
 			<th>nama alat</th>

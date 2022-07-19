@@ -27,7 +27,7 @@
 		<div class="container pe-5 ps-5">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fontnav text-white">
 				<li class="nav-item">
-					<a href="index.php" class="nav-link">HOMIE</a>
+					<a href="index.php" class="nav-link">HOME</a>
 				</li>
 				<li class="nav-item">
 					<a href="?page=halamanProduk" class="nav-link">PRODUCT</a>
@@ -40,10 +40,19 @@
 						<a class="nav-link" href="?page=daftarmember">Daftar Member</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="?page=order">Sewa</a>
+						<a class="nav-link" href="?page=order">Sewa Alat</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="?page=orderstudio">Sewa Studio</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+					</li>
+					<li class="nav-item">
+					<form class="d-flex flex-row" method="POST">
+                        <input class="form-control me-2" type="text" placeholder="Cari disini" name="search">
+                        <input class="btn btn-outline-success me-3" type="submit" value="Search"></input>
+                    </form>
 					</li>
 				</ul>
 			</div>
@@ -80,7 +89,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<address class="fw-bold mb-0">HOMIE MUSIC :</address>
-					<p class="mb-0">Jalan Merdeka No.101 , Manyar Surabaya</p>
+					<p class="mb-0">Jalan Udang Kering NO.99 ,Surabaya</p>
 					<p>WA : 081-3393-64971</p>
 				</div>
 				<div class="col-md-4"></div>

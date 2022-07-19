@@ -2,7 +2,7 @@
 include_once("menuCtrl.php");
 if (!isset($_GET['action'])) {
 ?>
-	<a href="?modul=mod_menu&action=add" class="btn btn-primary btn-xs mb-1">Tambah Data</a>
+	<a href="?modul=mod_menu&action=add" class="btn btn-success btn-xs mb-1">Tambah Data</a>
 	<table class="table table-bordered">
 		<tr>
 			<th>Nama menu</th>
@@ -18,8 +18,8 @@ if (!isset($_GET['action'])) {
 				<td><?= $q['nama_menu']; ?></td>
 				<td><?= $q['link']; ?></td>
 				<td><?= $q['icon']; ?></td>
-				<td><a href="?modul=mod_menu&action=edit&id=<?= $q['id_menu']; ?>" class="btn btn-xs btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
-					<a href="?modul=mod_menu&action=delete&id=<?= $q['id_menu']; ?>" class="btn btn-xs btn-danger"><i class="bi bi-trash"></i> Delete</a>
+				<td><a href="?modul=mod_menu&action=edit&id=<?= $q['id_menu']; ?>" class="btn btn-xs btn-success"><i class="bi bi-pencil-square"></i> Edit</a>
+					<a href="?modul=mod_menu&action=delete&id=<?= $q['id_menu']; ?>" class="btn btn-xs btn-warning"><i class="bi bi-trash"></i> Delete</a>
 				</td>
 			</tr>
 		<?php

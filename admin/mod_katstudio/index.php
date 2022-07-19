@@ -3,7 +3,7 @@ include_once("katstudioctrl.php");
 if (!isset($_GET['action'])) {
 ?>
     <h3 class="fontheader">DATA STUDIO MUSIC</h3>
-	<a href="?modul=mod_katstudio&action=add" class="btn btn-primary btn-xs mb-1">Tambah Data</a>
+	<a href="?modul=mod_katstudio&action=add" class="btn btn-success btn-xs mb-1">Tambah Data</a>
 	<table class="table table-bordered">
 		<tr>
 			<th>Kode Kategori studio</th>
@@ -19,10 +19,10 @@ if (!isset($_GET['action'])) {
             <td><?=$list['kode_katstudio']; ?></td>
             <td><?=$list['jenis_studio']; ?></td>
             <td> 
-                <a href="?modul=mod_katstudio&action=edit&id=<?=$list['id_katstudio']; ?>" class="btn btn-primary">
-                        <i class="bi bi-pencil-square"></i>edit</a>
-                <a href="?modul=mod_katstudio&action=delete&id=<?=$list['id_katstudio']; ?>" class="btn btn-danger">
-                        <i class="bi bi-trash"></i>delete</a>
+                <a href="?modul=mod_katstudio&action=edit&id=<?=$list['id_katstudio']; ?>" class="btn btn-success">
+                        <i class="bi bi-pencil-square"></i> edit</a>
+                <a href="?modul=mod_katstudio&action=delete&id=<?=$list['id_katstudio']; ?>" class="btn btn-warning">
+                        <i class="bi bi-trash"></i> delete</a>
             </td>
         </tr>
         <?php } ?>
@@ -96,7 +96,7 @@ if (!isset($_GET['action'])) {
 		<div class="row mb-1">
 			<label class="col-md-3">Nama Kategori Alat</label>
 			<div class="col-md-5">
-				<input type="text" name="jenisstudio" id="jenisstudio" class="form-control" value="<?= $upnmkatstudio;?>">
+				<input type="text" namesuccessstudio" idsuccessstudio" class="form-control" value="<?= $upnmkatstudio;?>">
 			</div>
 		</div>
         <div class="row pt-3">

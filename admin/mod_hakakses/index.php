@@ -26,7 +26,8 @@ if(!isset($_GET['act'])) {
 </div>
 <?php 
 } else if (isset($_GET['act']) &&  $_GET['act'] == 'edit') {
-    $quser = mysqli_query($koneksidb, "SELECT id_user, username FROM mst_user");
+	$id=$_GET['iduser'];
+    $quser = mysqli_query($koneksidb, "SELECT id_user, username FROM mst_user WHERE id_user='$id'");
     $qmenu = mysqli_query($koneksidb, "SELECT id_menu, nama_menu FROM mst_menu");
 ?>
 <div class="container-lg mt-1">
@@ -41,7 +42,6 @@ if(!isset($_GET['act'])) {
 							<select name="iduser" id="" class="form-select">
 								<?php
                                 while ($r = mysqli_fetch_array($quser)) {
-
                                     if($r['id_user'] == $username){
                                         $selec = "selected";
                                     }

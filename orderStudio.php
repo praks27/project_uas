@@ -1,6 +1,6 @@
 <?php 
 $data_member = mysqli_query($koneksidb,"select * from daftarmember");
-$data_produk = mysqli_query($koneksidb,"select * from mst_alatsewa ");
+$data_produk = mysqli_query($koneksidb,"select * from mst_studio ");
 $query_cekkode = mysqli_query($koneksidb,
 		"select nosewa from trn_sewahead ORDER BY nosewa DESC LIMIT 0,1");
 $cekkode = mysqli_fetch_array($query_cekkode);
@@ -25,7 +25,7 @@ else{
 }
 ?>
 <div class="container">
-	<form action="#" class="pb-5" id="formorder" method="POST">
+	<form action="#" class="pb-5" id="formorderstudio" method="POST">
 		<h3 class="pt-3">Form Pembelian</h3>
 		<div class="row pb-1">
 			<label class="control-label col-md-2">Nama Member</label>
@@ -49,7 +49,7 @@ else{
 				<input type="date" name="tgl_trans" id="tgl_trans" value="" class="form-control">
 			</div>
 		</div>
-        <div class="row">
+		<div class="row">
                 <div class="col-md-8"></div>
                 <label class="control-label col-md-1">Tanggal Kembali</label>
                 <div class="col-md-2">
@@ -63,10 +63,10 @@ else{
 					<option value="">--Pilih Barang--</option>
 					<?php 
 						foreach($data_produk as $p){
-							echo '<option value="'.$p['id_alat'].'"
-							data-namabrg="'.$p['nm_alat'].'"
-							data-hargabrg='.$p['hrg_alat'].'>
-							'.$p['nm_alat'].'</option>';
+							echo '<option value="'.$p['id_studio'].'"
+							data-namastudio="'.$p['nm_studio'].'"
+							data-hargastudio='.$p['hrg_sewastudio'].'>
+							'.$p['nm_studio'].'</option>';
 						}
 					?>
 				</select>
@@ -138,6 +138,7 @@ else{
 <?php 
 if(isset($_GET['action']) && $_GET['action'] == "ordersave"){
 	//head
+	$tgl_sekarang = date("Y-m-d H:i:s");
 	$nm_member = $_POST['nm_member'];
 	$no_inv = $_POST['no_inv'];
 	$tgl_trans = $_POST['tgl_trans'];
@@ -159,7 +160,7 @@ if(isset($_GET['action']) && $_GET['action'] == "ordersave"){
 			(nosewa,id_produk,harga,qty,subtotal) VALUES ('$no_inv', '$idbarang[$i]', $harga[$i], $qty[$i], $subtotal[$i])")
 			or die("error detail ".mysqli_error($koneksidb));
 		}
-		echo '<meta http-equiv="refresh" content="0; url='.MAIN_URL.'?page=order">';
+		echo '<meta http-equiv="refresh" content="0; url='.MAIN_URL.'?page=orderstudio">';
 	}	 
 
 }

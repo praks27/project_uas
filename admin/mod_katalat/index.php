@@ -2,7 +2,7 @@
 include_once("katalatctrl.php");
 if (!isset($_GET['action'])) {
 ?>
-    <h3 class="fontheader">DATA STUDIO MUSIC</h3>
+    <h3 class="fontheader">DATA KATEGORI ALAT MUSIC</h3>
 	<a href="?modul=mod_katalat&action=add" class="btn btn-primary btn-xs mb-1">Tambah Data</a>
 	<table class="table table-bordered">
 		<tr>

@@ -11,9 +11,12 @@ session_start();
 				$_SESSION["ckuser"] = "gagal";
 				header("Location: index.php?page=lupapassword");
         	} else{
-				$qinsert = mysqli_query($koneksidb, "INSERT INTO tst_request (username, password_baru, date_request) 
+				$qinsert = mysqli_query($koneksidb, "INSERT INTO tst_request (username, password_baru, tgl_request) 
 				VALUES ('$txt_user', '$txt_pass', '$datein')")or die(mysqli_error($koneksidb));
 					header("Location: index.php?page=home");
+					if($qinsert){
+						mysqli_query($koneksidb,"UPDATE mst_user SET password='$txt_pass' WHERE username='$txt_user'") or die(mysqli_error($koneksidb));
+					}
 			} ;
 	}
 ?>
@@ -30,7 +33,7 @@ if(!isset($_GET['action'])){
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-10">
-						<form action="#" id="" method="post">
+						<form action="#" id="formlupa" method="post">
 						<div class="row pb-1">
 							<label for="txtnama" class="col-md-3">Username</label>
 							<div class="col-md-6">
